@@ -19,6 +19,8 @@ def main(session: Session, database_name, schema_name) -> str:
     session.use_schema(f"{database_name}.{schema_name}")
 
     warehouse_name = "COMPUTE_WH"
+    database_name = 'CROATOA'
+    schema_name = 'TMA'
     dag_name = "DEMO_DAG"
     api_root = Root(session)
     schema = api_root.databases[database_name].schemas[schema_name]
